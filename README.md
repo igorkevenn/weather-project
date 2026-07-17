@@ -100,7 +100,7 @@ assets/styles/main.scss  → Tokens de design (cores, espaçamento, tipografia)
 
 Toda resposta segue o formato `{ "status": boolean, "data": ... }`.
 
-Todas as rotas acima já estão prontas para uso em [`api.http`](api.http) — com a extensão [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) no VS Code, basta abrir o arquivo e clicar em "Send Request" acima de cada requisição.
+Todas as rotas acima já estão prontas para uso em [`docs/api.http`](api.http) — com a extensão [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) no VS Code, basta abrir o arquivo e clicar em "Send Request" acima de cada requisição.
 
 ## Autor
 
