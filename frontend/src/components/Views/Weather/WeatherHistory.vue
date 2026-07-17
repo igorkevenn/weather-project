@@ -1,6 +1,6 @@
 <template>
   <section class="history card">
-    <h2 class="section-title">Últimas 5 buscas</h2>
+    <h2 class="section-title">Últimas buscas</h2>
 
     <p v-if="!items.length" class="history__empty">Nenhuma busca ainda.</p>
 

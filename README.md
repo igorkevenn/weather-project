@@ -57,14 +57,14 @@ assets/styles/main.scss  → Tokens de design (cores, espaçamento, tipografia)
 2. Suba os containers (Nginx + PHP-FPM + MySQL):
 
    ```bash
-   docker-compose up -d --build
+   docker compose up -d --build
    ```
 
 3. Instale as dependências PHP e rode as migrations:
 
    ```bash
-   docker exec weather_app_php composer install
-   docker exec weather_app_php vendor/bin/phinx migrate
+   docker exec weather_app_php sh -c "cd /var/www/html/backend && composer install"
+   docker exec weather_app_php sh -c "cd /var/www/html/backend && vendor/bin/phinx migrate"
    ```
 
 4. A API estará disponível em `http://localhost:8181`.

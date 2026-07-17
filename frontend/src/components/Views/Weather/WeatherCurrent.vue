@@ -15,7 +15,7 @@
       />
     </div>
 
-    <p class="current__temp">{{ Math.round(weather.temperature) }}°</p>
+    <p class="current__temp">{{ Math.round(weather.temperature) }}°C</p>
 
     <ul class="current__meta">
       <li><WeatherMetaIcon name="feels_like" />Sensação {{ Math.round(weather.feels_like) }}°</li>

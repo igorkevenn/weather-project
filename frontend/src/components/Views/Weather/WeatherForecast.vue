@@ -12,7 +12,7 @@
           loading="lazy"
           decoding="async"
         />
-        <p class="forecast__temp">{{ Math.round(item.temperature) }}°</p>
+        <p class="forecast__temp">{{ Math.round(item.temperature) }}°C</p>
         <p class="forecast__desc">{{ item.description }}</p>
       </article>
     </div>
