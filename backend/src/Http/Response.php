@@ -4,9 +4,6 @@ namespace App\Http;
 
 class Response
 {
-    /**
-     * Envelope no espírito da API v2: { status, data }
-     */
     public static function success(mixed $data = null, int $statusCode = 200): void
     {
         self::send(true, $data, $statusCode);

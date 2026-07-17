@@ -11,7 +11,7 @@ use App\Repositories\SearchHistoryRepository;
 use App\Services\OpenWeatherService;
 
 /**
- * Leituras do recurso Weather (conceito Listing da API v2)
+ * Leituras do recurso Weather 
  */
 class Listing
 {

@@ -7,7 +7,7 @@ use App\Interfaces\SearchHistoryRepositoryInterface;
 use App\Repositories\SearchHistoryRepository;
 
 /**
- * Escritas do histórico (conceito Action da API v2)
+ * Escritas do histórico
  */
 class Action
 {

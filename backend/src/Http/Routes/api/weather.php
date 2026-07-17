@@ -5,7 +5,6 @@ use App\Models\Api\Weather\Listing;
 
 /**
  * Rotas do recurso Weather
- * Estilo API v2: rota instancia Listing e devolve Response
  */
 return function (string $uri, string $method): bool {
     if ($method !== 'GET') {

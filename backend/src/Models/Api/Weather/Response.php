@@ -7,7 +7,7 @@ use App\DTOs\CityDTO;
 use App\DTOs\WeatherDTO;
 
 /**
- * Mapper de resposta do recurso Weather (como Response.php da API v2)
+ * Mapper de resposta do recurso Weather
  */
 class Response
 {
