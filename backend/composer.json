@@ -1,0 +1,23 @@
+{
+    "name": "inevent/weather-challenge",
+    "description": "Teste Prático Full Stack InEvent",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Igor Kevenn"
+        }
+    ],
+    "require": {
+        "robmorgan/phinx": "^0.16.0"
+    },
+    "config": {
+        "process-timeout": 0,
+        "allow-plugins": {
+            "cakephp/cakephp-codesniffer": true
+        }
+    }
+}
