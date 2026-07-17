@@ -1,0 +1,59 @@
+:root {
+  --bg: #f4f4f5;
+  --surface: #eaeaec;
+  --surface-hover: #e0e0e3;
+  --text: #18181b;
+  --text-muted: #71717a;
+  --line: #d4d4d8;
+  --icon-color: #46464c;
+  --accent: #18181b;
+  --accent-text: #fafafa;
+  --danger: #dc2626;
+  --danger-soft: #fef2f2;
+  --radius: 12px;
+  --font-display: 'Google Sans Flex', system-ui, sans-serif;
+  --font-body: 'Google Sans Flex', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
