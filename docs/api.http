@@ -1,0 +1,37 @@
+### Weather App — Collection - Uso com a extensão REST Client / VS Code
+### Suba o backend antes (docker compose up -d) e ajuste @baseUrl se necessário.
+
+@baseUrl = http://localhost:8181
+
+### Health check
+GET {{baseUrl}}/
+
+### Geocode — busca cidades por nome
+GET {{baseUrl}}/api/geocode?q=São Paulo
+
+### Clima atual — por nome de cidade
+GET {{baseUrl}}/api/weather?city=São Paulo
+
+### Clima atual — por coordenadas
+GET {{baseUrl}}/api/weather?lat=-23.55&lon=-46.63
+
+### Previsão — por nome de cidade
+GET {{baseUrl}}/api/forecast?city=São Paulo
+
+### Previsão — por coordenadas
+GET {{baseUrl}}/api/forecast?lat=-23.55&lon=-46.63
+
+### Qualidade do ar — por nome de cidade
+GET {{baseUrl}}/api/air-pollution?city=São Paulo
+
+### Qualidade do ar — por coordenadas
+GET {{baseUrl}}/api/air-pollution?lat=-23.55&lon=-46.63
+
+### Histórico — últimas buscas (limit padrão e máximo: 5)
+GET {{baseUrl}}/api/history?limit=5
+
+### Histórico — remover um item (troque o :id por um id existente)
+DELETE {{baseUrl}}/api/history/1
+
+### Diagnóstico — testa a conexão com o banco
+GET {{baseUrl}}/api/db-test
