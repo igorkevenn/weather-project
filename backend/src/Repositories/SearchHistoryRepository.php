@@ -60,8 +60,16 @@ class SearchHistoryRepository implements SearchHistoryRepositoryInterface
 
     public function delete(int $id): bool
     {
-        $stmt = $this->db->prepare('DELETE FROM search_history WHERE id = :id');
+        $stmt = $this->db->prepare('SELECT city_name FROM search_history WHERE id = :id');
         $stmt->execute([':id' => $id]);
+        $cityName = $stmt->fetchColumn();
+
+        if ($cityName === false) {
+            return false;
+        }
+
+        $stmt = $this->db->prepare('DELETE FROM search_history WHERE city_name = :city_name');
+        $stmt->execute([':city_name' => $cityName]);
 
         return $stmt->rowCount() > 0;
     }

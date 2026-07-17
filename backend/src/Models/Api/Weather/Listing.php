@@ -75,14 +75,14 @@ class Listing
 
         if ($lat !== null && $lon !== null && $lat !== '' && $lon !== '') {
             return new CityDTO(
-                name: $cityName !== '' ? $cityName : 'Localização',
+                name: $cityName,
                 lat: (float) $lat,
                 lon: (float) $lon,
             );
         }
 
         if ($cityName === '') {
-            throw new AppException('Informe a cidade ou lat/lon.', 422);
+            throw new AppException('Informe a cidade.', 422);
         }
 
         $results = $this->weatherService->geocode($cityName, 1);

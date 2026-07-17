@@ -95,7 +95,7 @@ class WeatherDTO
         $cityNameSearch = $cityName ?? ''; 
 
         return new self(
-            cityName: (string) ($cityNameSearch ?? $data['name'] ?? ''),
+            cityName: (string) ($cityNameSearch ?: ($data['name'] ?? '')),
             country: (string) ($data['sys']['country'] ?? ''),
             lat: (float) ($data['coord']['lat'] ?? $lat),
             lon: (float) ($data['coord']['lon'] ?? $lon),
