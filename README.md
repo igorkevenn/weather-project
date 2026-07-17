@@ -12,7 +12,7 @@ Aplicação de previsão do tempo desenvolvida consumindo a [API da OpenWeatherM
 
 ## Tecnologias
 
-**Backend:** PHP 8.2 (sem framework, estrutura própria), PDO/MySQL, Nginx, Docker, Phinx para migrations.
+**Backend:** PHP 8.2 base (sem framework), PDO/MySQL, Nginx, Docker, Phinx para migrations.
 
 **Frontend:** Vue 3, TypeScript, Vite, SCSS, Axios.
 
@@ -21,21 +21,21 @@ Aplicação de previsão do tempo desenvolvida consumindo a [API da OpenWeatherM
 O backend não usa um framework — é uma estrutura enxuta em `backend/src/`, organizada por responsabilidade:
 
 ```
-Http/Routes/api/*.php    → roteamento (recebe a URI, delega e devolve a resposta)
+Http/Routes/api/*.php    → Roteamento (recebe a URI, delega e devolve a resposta)
 Models/Api/{Recurso}/    → Listing (leitura) e Action (escrita) orquestram o caso de uso
-Services/                → integração com a API da OpenWeather
-Repositories/            → acesso a dados (PDO), implementam interfaces em Interfaces/
-DTOs/                    → objetos de transferência tipados entre as camadas
+Services/                → Integração com a API da OpenWeather
+Repositories/            → Acesso a dados (PDO), implementam interfaces em Interfaces/
+DTOs/                    → Objetos de transferência tipados entre as camadas
 ```
 
 O frontend segue a mesma ideia de separação:
 
 ```
-composables/Api/         → chamadas HTTP por domínio (Weather, History)
-components/Common/       → peças reutilizáveis (ícones)
-components/Views/Weather/→ componentes específicos da tela de clima
-views/                   → composição das telas
-assets/styles/main.scss  → tokens de design (cores, espaçamento, tipografia)
+composables/Api/         → Chamadas HTTP por domínio (Weather, History)
+components/Common/       → Peças reutilizáveis (ícones)
+components/Views/Weather/→ Componentes específicos da tela de clima
+views/                   → Composição das telas
+assets/styles/main.scss  → Tokens de design (cores, espaçamento, tipografia)
 ```
 
 ## Como rodar o projeto
@@ -63,8 +63,8 @@ assets/styles/main.scss  → tokens de design (cores, espaçamento, tipografia)
 3. Instale as dependências PHP e rode as migrations:
 
    ```bash
-   docker exec inevent_weather_php composer install
-   docker exec inevent_weather_php vendor/bin/phinx migrate
+   docker exec weather_app_php composer install
+   docker exec weather_app_php vendor/bin/phinx migrate
    ```
 
 4. A API estará disponível em `http://localhost:8181`.
